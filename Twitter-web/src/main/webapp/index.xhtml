@@ -15,6 +15,18 @@
         </h:column>
         <h:column>
             <f:facet name="header">
+                <h:outputText value="Author" />
+            </f:facet>
+            <h:outputText value="#{post.author.username}" />
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Author" />
+            </f:facet>
+            <h:outputText value="#{post.creationdate}" />
+        </h:column>
+        <h:column>
+            <f:facet name="header">
                 <h:outputText value="Content" />
             </f:facet>
             <h:outputText value="#{post.content}" />

@@ -1,3 +1,5 @@
+package soa.web.beans;
+
 import soa.ejb.local.PostsManager;
 import soa.model.entity.PostEntity;
 
