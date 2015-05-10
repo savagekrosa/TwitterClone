@@ -6,7 +6,11 @@
         http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
    <persistence-unit name="twitter">
       <jta-data-source>java:jboss/datasources/twitterDS</jta-data-source>
+       <class>soa.model.entity.CommentEntity</class>
+       <class>soa.model.entity.GroupEntity</class>
+       <class>soa.model.entity.HashtagEntity</class>
        <class>soa.model.entity.PostEntity</class>
+       <class>soa.model.entity.UserEntity</class>
        <properties>
            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
            <property name="hibernate.show_sql" value="true"/>
