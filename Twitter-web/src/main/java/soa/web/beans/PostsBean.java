@@ -15,7 +15,7 @@ public class PostsBean {
     @EJB
     PostsManager postsManager;
 
-    List<PostEntity> posts;
+    private List<PostEntity> posts;
 
     @PostConstruct
     public void init() {
