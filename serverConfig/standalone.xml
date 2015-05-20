@@ -309,6 +309,17 @@
         <subsystem xmlns="urn:jboss:domain:sar:1.0"/>
         <subsystem xmlns="urn:jboss:domain:security:1.2">
             <security-domains>
+                <security-domain name="twitterDomain" cache-type="default">
+                    <authentication>
+                        <login-module code="Database" flag="required">
+                            <module-option name="dsJndiName" value="java:jboss/datasources/twitterDS"/>
+                            <module-option name="principalsQuery" value="select password from users where username=?"/>
+                            <module-option name="rolesQuery" value="select usergroup, 'Roles' from users where username=?"/>
+                            <module-option name="hashAlgorithm" value="SHA-256"/>
+                            <module-option name="hashEncoding" value="base64"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
                 <security-domain name="other" cache-type="default">
                     <authentication>
                         <login-module code="Remoting" flag="optional">
@@ -399,4 +410,9 @@
         </outbound-socket-binding>
     </socket-binding-group>
 
+    <deployments>
+        <deployment name="Twitter-ear.ear" runtime-name="Twitter-ear.ear">
+            <content sha1="9c5eb0de7b5fc48ae877ee0ec615f87861e195a1"/>
+        </deployment>
+    </deployments>
 </server>
