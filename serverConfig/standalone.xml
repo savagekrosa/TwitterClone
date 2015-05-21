@@ -409,10 +409,4 @@
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
     </socket-binding-group>
-
-    <deployments>
-        <deployment name="Twitter-ear.ear" runtime-name="Twitter-ear.ear">
-            <content sha1="9c5eb0de7b5fc48ae877ee0ec615f87861e195a1"/>
-        </deployment>
-    </deployments>
 </server>

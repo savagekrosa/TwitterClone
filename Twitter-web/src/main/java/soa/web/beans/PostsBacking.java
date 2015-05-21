@@ -9,9 +9,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import java.util.List;
 
-@ManagedBean(name="posts")
+@ManagedBean(name="postsBacking")
 @RequestScoped
-public class PostsBean {
+public class PostsBacking {
     @EJB
     PostsManager postsManager;
 
