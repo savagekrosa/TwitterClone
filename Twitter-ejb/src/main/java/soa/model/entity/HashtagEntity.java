@@ -1,13 +1,22 @@
 package soa.model.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
-
+@NamedQueries({
+        @NamedQuery(name = "HashtagEntity.findAll", query = "select hashtag from HashtagEntity hashtag"),
+        @NamedQuery(name = "HashtagEntity.findTaggedPosts", query = "select hashtag.taggedPosts from HashtagEntity hashtag where hashtag.hashtag = :tag"),
+        @NamedQuery(name = "HashtagEntity.findByTag", query = "select hashtag from HashtagEntity hashtag where hashtag.hashtag = :tag")
+})
 @Entity
 @Table(name = "hashtags")
 public class HashtagEntity {
     private String hashtag;
     private List<PostEntity> taggedPosts;
+
+    public HashtagEntity() {
+        taggedPosts = new ArrayList<>();
+    }
 
     @Id
     @Column(name = "hashtag")
@@ -17,6 +26,15 @@ public class HashtagEntity {
 
     public void setHashtag(String hashtag) {
         this.hashtag = hashtag;
+    }
+
+    @ManyToMany(mappedBy = "hashtags", cascade = CascadeType.ALL)
+    public List<PostEntity> getTaggedPosts() {
+        return taggedPosts;
+    }
+
+    public void setTaggedPosts(List<PostEntity> taggedPosts) {
+        this.taggedPosts = taggedPosts;
     }
 
     @Override
@@ -36,13 +54,5 @@ public class HashtagEntity {
         return hashtag != null ? hashtag.hashCode() : 0;
     }
 
-    @ManyToMany
-    @JoinTable(name = "hashtags", catalog = "Twitter", schema = "public", joinColumns = @JoinColumn(name = "hashtag", referencedColumnName = "hashtag", nullable = false), inverseJoinColumns = @JoinColumn(name = "postid", referencedColumnName = "postid", nullable = false))
-    public List<PostEntity> getTaggedPosts() {
-        return taggedPosts;
-    }
 
-    public void setTaggedPosts(List<PostEntity> taggedPosts) {
-        this.taggedPosts = taggedPosts;
-    }
 }

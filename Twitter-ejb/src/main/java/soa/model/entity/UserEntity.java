@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
 
+@NamedQuery(name="UserEntity.findByUsername", query = "select user from UserEntity user where user.username = :name")
 @Entity
 @Table(name = "users")
 public class UserEntity {
@@ -16,6 +17,7 @@ public class UserEntity {
     private GroupEntity userGroup;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "userid")
     public int getUserId() {
         return userId;

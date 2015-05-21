@@ -2,8 +2,11 @@ package soa.model.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+@NamedQuery(name = "PostEntity.findAll", query = "select post from PostEntity post")
 @Entity
 @Table(name = "posts")
 public class PostEntity {
@@ -14,7 +17,13 @@ public class PostEntity {
     private List<HashtagEntity> hashtags;
     private UserEntity author;
 
+    public PostEntity() {
+        comments = new ArrayList<>();
+        hashtags = new ArrayList<>();
+        creationdate = new Timestamp(new Date().getTime());
+    }
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "postid")
     public int getPostId() {
         return postId;
@@ -75,7 +84,10 @@ public class PostEntity {
         this.comments = comments;
     }
 
-    @ManyToMany(mappedBy = "taggedPosts")
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "hashtagsposts",
+            joinColumns = @JoinColumn(name = "postid", referencedColumnName = "postid", nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "hashtag", referencedColumnName = "hashtag", nullable = false))
     public List<HashtagEntity> getHashtags() {
         return hashtags;
     }

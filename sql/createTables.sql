@@ -1,3 +1,4 @@
+drop table HashtagsPosts;
 drop table hashtags;
 drop table comments;
 drop table posts;
@@ -27,7 +28,10 @@ create table Comments (
   CreationDate timestamp not null
 );
 create table Hashtags (
-  Hashtag varchar(30),
+  Hashtag varchar(30) primary key
+);
+create table HashtagsPosts (
+  Hashtag varchar(30) references Hashtags,
   PostID integer references Posts,
   primary key(Hashtag, PostID)
 );
