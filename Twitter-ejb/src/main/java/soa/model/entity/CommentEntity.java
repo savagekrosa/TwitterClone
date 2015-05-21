@@ -13,6 +13,7 @@ public class CommentEntity {
     private UserEntity author;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "commentid")
     public int getCommentId() {
         return commentId;

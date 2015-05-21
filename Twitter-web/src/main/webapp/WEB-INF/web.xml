@@ -60,6 +60,28 @@
         </user-data-constraint>
     </security-constraint>
     <security-constraint>
+        <display-name>Blogger Pages</display-name>
+        <web-resource-collection>
+            <web-resource-name>Protected Blogger Area</web-resource-name>
+            <description>Protected Blogger Area</description>
+            <url-pattern>/blogger/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+            <http-method>HEAD</http-method>
+            <http-method>PUT</http-method>
+            <http-method>OPTIONS</http-method>
+            <http-method>TRACE</http-method>
+            <http-method>DELETE</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>blogger</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    <security-constraint>
         <display-name>Restrict direct access to the /resources folder.</display-name>
         <web-resource-collection>
             <web-resource-name>The /resources folder.</web-resource-name>
