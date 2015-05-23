@@ -3,15 +3,15 @@ package soa.web.beans;
 import soa.ejb.local.UserManager;
 import soa.model.entity.UserEntity;
 
-import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 
 @ManagedBean(name="userBacking")
 @SessionScoped
 public class UserBacking {
-    @EJB
+    @Inject
     UserManager userManager;
 
     public UserEntity getLoggedUser() {

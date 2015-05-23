@@ -9,10 +9,10 @@
       <version>1.0-SNAPSHOT</version>
    </parent>
 
-   <artifactId>Twitter-web</artifactId>
+   <artifactId>Twitter-rest</artifactId>
    <packaging>war</packaging>
 
-   <name>Twitter: WAR Module</name>
+   <name>Twitter: REST Module</name>
     <repositories>
         <repository>
             <id>JBoss Repository</id>
@@ -45,12 +45,18 @@
          <artifactId>cdi-api</artifactId>
          <scope>provided</scope>
       </dependency>
-      
-      <dependency>
-         <groupId>org.jboss.spec.javax.faces</groupId>
-         <artifactId>jboss-jsf-api_2.2_spec</artifactId>
-         <scope>provided</scope>
-      </dependency>
+
+       <dependency>
+           <groupId>org.jboss.resteasy</groupId>
+           <artifactId>jaxrs-api</artifactId>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.jboss.spec.javax.ejb</groupId>
+           <artifactId>jboss-ejb-api_3.2_spec</artifactId>
+           <scope>provided</scope>
+       </dependency>
 
        <dependency>
            <groupId>org.hibernate</groupId>

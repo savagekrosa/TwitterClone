@@ -17,6 +17,7 @@
         </license>
     </licenses>
     <modules>
+        <module>Twitter-rest</module>
         <module>Twitter-jpa</module>
         <module>Twitter-ejb</module>
         <module>Twitter-web</module>
@@ -54,8 +55,6 @@
     <dependencyManagement>
         <dependencies>
 
-            <!-- Define the version of the EJB jar so that we don't need 
-                to repeat ourselves in every module -->
             <dependency>
                 <groupId>soa</groupId>
                 <artifactId>Twitter-ejb</artifactId>
@@ -66,6 +65,14 @@
             <dependency>
                 <groupId>soa</groupId>
                 <artifactId>Twitter-web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+                <scope>compile</scope>
+            </dependency>
+
+	    <dependency>
+                <groupId>soa</groupId>
+                <artifactId>Twitter-rest</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>

@@ -31,6 +31,11 @@
         </dependency>
         <dependency>
             <groupId>soa</groupId>
+            <artifactId>Twitter-rest</artifactId>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>soa</groupId>
             <artifactId>Twitter-ejb</artifactId>
             <type>ejb</type>
         </dependency>
@@ -55,6 +60,11 @@
                         <artifactId>Twitter-web</artifactId>
                         <contextRoot>/</contextRoot>
                     </webModule>
+                        <webModule>
+                            <groupId>soa</groupId>
+                            <artifactId>Twitter-rest</artifactId>
+                            <contextRoot>/rest/</contextRoot>
+                        </webModule>
                     </modules>
                     <version>7</version>
                     <!-- Use Java EE ear libraries as needed. Java EE ear libraries 
