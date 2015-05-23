@@ -28,7 +28,7 @@ public class HashtagEntity {
         this.hashtag = hashtag;
     }
 
-    @ManyToMany(mappedBy = "hashtags", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "hashtags", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     public List<PostEntity> getTaggedPosts() {
         return taggedPosts;
     }

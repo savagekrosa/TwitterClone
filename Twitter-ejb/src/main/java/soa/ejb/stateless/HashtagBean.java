@@ -20,9 +20,10 @@ public class HashtagBean implements HashtagManager {
 
     @Override
     public List<PostEntity> getPostsTaggedWith(String hashtag) {
-        TypedQuery<PostEntity> query = em.createNamedQuery("HashtagEntity.findTaggedPosts", PostEntity.class)
-                .setParameter("tag", hashtag);
-        return query.getResultList();
+        HashtagEntity hashtagEntity = getHastagForTag(hashtag);
+        if( hashtagEntity != null )
+            return hashtagEntity.getTaggedPosts();
+        return null;
     }
 
     @Override
