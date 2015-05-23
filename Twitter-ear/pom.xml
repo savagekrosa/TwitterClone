@@ -24,8 +24,6 @@
     </licenses>
 
     <dependencies>
-
-        <!-- Depend on the ejb module and war so that we can package them -->
         <dependency>
             <groupId>soa</groupId>
             <artifactId>Twitter-web</artifactId>
@@ -35,6 +33,11 @@
             <groupId>soa</groupId>
             <artifactId>Twitter-ejb</artifactId>
             <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>soa</groupId>
+            <artifactId>Twitter-jpa</artifactId>
+            <type>jar</type>
         </dependency>
     </dependencies>
 
@@ -53,7 +56,6 @@
                         <contextRoot>/</contextRoot>
                     </webModule>
                     </modules>
-                    <!-- Tell Maven we are using Java EE 7 -->
                     <version>7</version>
                     <!-- Use Java EE ear libraries as needed. Java EE ear libraries 
                         are in easy way to package any libraries needed in the ear, and automatically 

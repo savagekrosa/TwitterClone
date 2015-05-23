@@ -27,7 +27,12 @@
       </license>
    </licenses>
    <dependencies>
-
+       <dependency>
+           <groupId>soa</groupId>
+           <artifactId>Twitter-jpa</artifactId>
+           <type>jar</type>
+           <scope>provided</scope>
+       </dependency>
       <dependency>
          <groupId>soa</groupId>
          <artifactId>Twitter-ejb</artifactId>
