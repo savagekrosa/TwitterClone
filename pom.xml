@@ -127,6 +127,7 @@
                     <inherited>true</inherited>
                     <configuration>
                         <skip>true</skip>
+                        <port>9993</port>
                     </configuration>
                 </plugin>
             </plugins>
