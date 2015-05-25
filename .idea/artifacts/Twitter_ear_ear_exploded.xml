@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="Twitter-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/Twitter-ear/target/Twitter-ear</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Twitter-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Twitter-ear/target/MANIFEST.MF" />
+      </element>
+      <element id="archive" name="Twitter-web.war">
+        <element id="artifact" artifact-name="Twitter-web:war exploded" />
+      </element>
+      <element id="archive" name="Twitter-rest.war">
+        <element id="artifact" artifact-name="Twitter-rest:war exploded" />
+      </element>
+      <element id="archive" name="Twitter-ejb.jar">
+        <element id="artifact" artifact-name="Twitter-ejb:ejb exploded" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="archive" name="Twitter-jpa.jar">
+          <element id="module-output" name="Twitter-jpa" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

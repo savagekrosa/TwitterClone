@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="Twitter-ejb:ejb">
+    <output-path>$PROJECT_DIR$/Twitter-ejb/target</output-path>
+    <root id="archive" name="Twitter-ejb.jar">
+      <element id="artifact" artifact-name="Twitter-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>
