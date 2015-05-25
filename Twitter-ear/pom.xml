@@ -55,11 +55,11 @@
                 <version>${version.ear.plugin}</version>
                 <configuration>
                     <modules>
-                    <webModule>
-                        <groupId>soa</groupId>
-                        <artifactId>Twitter-web</artifactId>
-                        <contextRoot>/</contextRoot>
-                    </webModule>
+                        <webModule>
+                            <groupId>soa</groupId>
+                            <artifactId>Twitter-web</artifactId>
+                            <contextRoot>/</contextRoot>
+                        </webModule>
                         <webModule>
                             <groupId>soa</groupId>
                             <artifactId>Twitter-rest</artifactId>
@@ -89,7 +89,7 @@
                     <execution>
                         <phase>package</phase>
                         <goals>
-                           <goal>deploy</goal>
+                            <goal>deploy</goal>
                         </goals>
                     </execution>
                 </executions>

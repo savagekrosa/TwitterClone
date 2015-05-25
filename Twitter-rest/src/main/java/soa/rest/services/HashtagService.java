@@ -4,8 +4,8 @@ package soa.rest.services;
 import soa.ejb.local.HashtagManager;
 import soa.model.entity.PostEntity;
 
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -15,7 +15,7 @@ import java.util.List;
 @Path("/hashtag")
 @Stateless
 public class HashtagService {
-    @EJB
+    @Inject
     HashtagManager hashtagManager;
 
     @GET
