@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b2bf348-b257-436d-adea-cffaf120366a" name="Default" comment="" />
+    <list default="true" id="0b2bf348-b257-436d-adea-cffaf120366a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/message/PostMessageBean.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sql/createTables.sql" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear.ear" afterPath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear.ear" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear/Twitter-ejb.jar" afterPath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear/Twitter-ejb.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ejb/target/Twitter-ejb.jar" afterPath="$PROJECT_DIR$/Twitter-ejb/target/Twitter-ejb.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear/lib/Twitter-jpa.jar" afterPath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear/lib/Twitter-jpa.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-jpa/target/Twitter-jpa.jar" afterPath="$PROJECT_DIR$/Twitter-jpa/target/Twitter-jpa.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear/Twitter-rest.war" afterPath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear/Twitter-rest.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-rest/target/Twitter-rest.war" afterPath="$PROJECT_DIR$/Twitter-rest/target/Twitter-rest.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear/Twitter-web.war" afterPath="$PROJECT_DIR$/Twitter-ear/target/Twitter-ear/Twitter-web.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-web/target/Twitter-web.war" afterPath="$PROJECT_DIR$/Twitter-web/target/Twitter-web.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/PostsBacking.java" afterPath="$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/PostsBacking.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ear/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/Twitter-ear/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ejb/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/Twitter-ejb/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-jpa/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/Twitter-jpa/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-rest/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/Twitter-rest/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-web/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/Twitter-web/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ejb/pom.xml" afterPath="$PROJECT_DIR$/Twitter-ejb/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-web/pom.xml" afterPath="$PROJECT_DIR$/Twitter-web/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serverConfig/standalone.xml" afterPath="$PROJECT_DIR$/serverConfig/standalone.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Twitter.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/Twitter-ejb/target/" />
@@ -28,11 +51,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26903552">
-              <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="115" column="17" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitter-rest/src/main/java/soa/rest/RestApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -42,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/Twitter-web/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,17 +107,47 @@
         <entry file="file://$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/PostsBacking.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostsManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/local/PostsManager.java">
+      <file leaf-file-name="UserBacking.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/UserBacking.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/CommentEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashtagEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/HashtagEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupEntity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/GroupEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30456853">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -237,6 +300,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="beans" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterClone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter-rest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterClone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter-rest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwitterClone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter-rest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,16 +624,16 @@
       <option name="number" value="Default" />
       <updated>1432068126280</updated>
       <workItem from="1432068128439" duration="714000" />
-      <workItem from="1432560506871" duration="683000" />
+      <workItem from="1432560506871" duration="2135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1397000" />
+    <option name="totallyTimeSpent" value="2849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="449" width="1368" height="742" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -521,7 +646,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -602,18 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/PostsBacking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Twitter-web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -628,8 +745,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26903552">
-          <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="17" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter-rest/src/main/java/soa/rest/RestApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/PostsBacking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/UserBacking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/CommentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/HashtagEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/GroupEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30456853">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>

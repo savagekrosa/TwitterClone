@@ -4,15 +4,24 @@ import soa.ejb.local.PostsManager;
 import soa.model.entity.PostEntity;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import javax.inject.Inject;
+import javax.jms.JMSContext;
+import javax.jms.JMSException;
+import javax.jms.MapMessage;
+import javax.jms.Queue;
 import java.util.List;
 
 @ManagedBean(name = "postsBacking")
 @RequestScoped
 public class PostsBacking {
+    @Resource(mappedName = "java:jboss/exported/jms/queue/twitter")
+    private Queue twitterQueue;
+    @Inject
+    private JMSContext jmsContext;
     @Inject
     PostsManager postsManager;
     @ManagedProperty(value = "#{userBacking}")
@@ -26,7 +35,15 @@ public class PostsBacking {
     }
 
     public String createPost() {
-        postsManager.savePost(newPostContent, userBacking.getLoggedUser());
+        MapMessage msg = jmsContext.createMapMessage();
+        try {
+            msg.setString("content", newPostContent);
+            msg.setString("author", userBacking.getLoggedUser().getUsername());
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
+        jmsContext.createProducer().send(twitterQueue, msg);
+//        postsManager.savePost(newPostContent, userBacking.getLoggedUser());
         return "timeline?faces-redirect=true";
     }
 
