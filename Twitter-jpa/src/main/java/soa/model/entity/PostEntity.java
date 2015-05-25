@@ -22,6 +22,7 @@ public class PostEntity {
         hashtags = new ArrayList<>();
         creationdate = new Timestamp(new Date().getTime());
     }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "postid")

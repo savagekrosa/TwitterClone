@@ -3,6 +3,7 @@ package soa.model.entity;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
 @NamedQueries({
         @NamedQuery(name = "HashtagEntity.findAll", query = "select hashtag from HashtagEntity hashtag"),
         @NamedQuery(name = "HashtagEntity.findTaggedPosts", query = "select hashtag.taggedPosts from HashtagEntity hashtag where hashtag.hashtag = :tag"),

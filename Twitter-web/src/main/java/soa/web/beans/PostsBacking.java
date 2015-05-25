@@ -10,7 +10,7 @@ import javax.faces.bean.RequestScoped;
 import javax.inject.Inject;
 import java.util.List;
 
-@ManagedBean(name="postsBacking")
+@ManagedBean(name = "postsBacking")
 @RequestScoped
 public class PostsBacking {
     @Inject

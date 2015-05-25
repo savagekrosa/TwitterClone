@@ -1,49 +1,52 @@
-drop table HashtagsPosts;
-drop table hashtags;
-drop table comments;
-drop table posts;
-drop table users;
-drop table groups;
-create table Groups (
-  GroupID varchar(30) primary key
+DROP TABLE HashtagsPosts;
+DROP TABLE hashtags;
+DROP TABLE comments;
+DROP TABLE posts;
+DROP TABLE users;
+DROP TABLE groups;
+CREATE TABLE Groups (
+  GroupID VARCHAR(30) PRIMARY KEY
 );
-create table Users (
-  UserID serial primary key,
-  Mail varchar(80) unique not null,
-  Username varchar(50) unique not null,
-  Password varchar(255) not null,
-  UserGroup varchar(30) not null references Groups
+CREATE TABLE Users (
+  UserID    SERIAL PRIMARY KEY,
+  Mail      VARCHAR(80) UNIQUE NOT NULL,
+  Username  VARCHAR(50) UNIQUE NOT NULL,
+  Password  VARCHAR(255)       NOT NULL,
+  UserGroup VARCHAR(30)        NOT NULL REFERENCES Groups
 );
-create table Posts (
-  PostId serial primary key,
-  Content varchar(300) not null,
-  Author integer not null references Users,
-  CreationDate timestamp not null
+CREATE TABLE Posts (
+  PostId       SERIAL PRIMARY KEY,
+  Content      VARCHAR(300) NOT NULL,
+  Author       INTEGER      NOT NULL REFERENCES Users,
+  CreationDate TIMESTAMP    NOT NULL
 );
-create table Comments (
-  CommentID serial primary key,
-  Content varchar(300) not null,
-  PostID integer not null references Posts,
-  Author integer not null references Users,
-  CreationDate timestamp not null
+CREATE TABLE Comments (
+  CommentID    SERIAL PRIMARY KEY,
+  Content      VARCHAR(300) NOT NULL,
+  PostID       INTEGER      NOT NULL REFERENCES Posts,
+  Author       INTEGER      NOT NULL REFERENCES Users,
+  CreationDate TIMESTAMP    NOT NULL
 );
-create table Hashtags (
-  Hashtag varchar(30) primary key
+CREATE TABLE Hashtags (
+  Hashtag VARCHAR(30) PRIMARY KEY
 );
-create table HashtagsPosts (
-  Hashtag varchar(30) references Hashtags,
-  PostID integer references Posts,
-  primary key(Hashtag, PostID)
+CREATE TABLE HashtagsPosts (
+  Hashtag VARCHAR(30) REFERENCES Hashtags,
+  PostID  INTEGER REFERENCES Posts,
+  PRIMARY KEY (Hashtag, PostID)
 );
-create index CostCreationDateIndex on Posts(creationdate desc);
-create index CommentCreationDateIndex on Comments(creationdate desc);
-create index CommentAuthorIndex on Comments(author asc);
-create index PostAuthorIndex on Posts(author asc);
-create index CommentPostFKeyIndex on Comments(postid asc);
-insert into groups(groupid) values('admin'), ('moderator'), ('blogger');
+CREATE INDEX CostCreationDateIndex ON Posts (creationdate DESC);
+CREATE INDEX CommentCreationDateIndex ON Comments (creationdate DESC);
+CREATE INDEX CommentAuthorIndex ON Comments (author ASC);
+CREATE INDEX PostAuthorIndex ON Posts (author ASC);
+CREATE INDEX CommentPostFKeyIndex ON Comments (postid ASC);
+INSERT INTO groups (groupid) VALUES ('admin'), ('moderator'), ('blogger');
 --login: admin pass: admin
-insert into users(mail, username, password, usergroup) values ('admin', 'admin', 'jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=', 'admin');
+INSERT INTO users (mail, username, password, usergroup)
+VALUES ('admin', 'admin', 'jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=', 'admin');
 --login: blogger pass: blogger
-insert into users(mail, username, password, usergroup) values ('blogger', 'blogger', 'B1XdNqAjjlzY+Kos7g3gKPkOpz7lVKGFJ4aN26lSIUg=', 'blogger');
+INSERT INTO users (mail, username, password, usergroup)
+VALUES ('blogger', 'blogger', 'B1XdNqAjjlzY+Kos7g3gKPkOpz7lVKGFJ4aN26lSIUg=', 'blogger');
 --login: moderator pass: moderator
-insert into users(mail, username, password, usergroup) values ('moderator', 'moderator', 'z94spRiK+3vdBpHHvviHurp4twmq3ejoxTUynVdR5v4=', 'moderator');
+INSERT INTO users (mail, username, password, usergroup)
+VALUES ('moderator', 'moderator', 'z94spRiK+3vdBpHHvviHurp4twmq3ejoxTUynVdR5v4=', 'moderator');

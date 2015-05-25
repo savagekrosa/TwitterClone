@@ -8,7 +8,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
-@ManagedBean(name="userBacking")
+@ManagedBean(name = "userBacking")
 @SessionScoped
 public class UserBacking {
     @Inject

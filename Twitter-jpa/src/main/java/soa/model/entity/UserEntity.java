@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
 
-@NamedQuery(name="UserEntity.findByUsername", query = "select user from UserEntity user where user.username = :name")
+@NamedQuery(name = "UserEntity.findByUsername", query = "select user from UserEntity user where user.username = :name")
 @Entity
 @Table(name = "users")
 public class UserEntity {

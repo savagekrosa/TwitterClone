@@ -21,7 +21,7 @@ public class HashtagBean implements HashtagManager {
     @Override
     public List<PostEntity> getPostsTaggedWith(String hashtag) {
         HashtagEntity hashtagEntity = getHastagForTag(hashtag);
-        if( hashtagEntity != null )
+        if (hashtagEntity != null)
             return hashtagEntity.getTaggedPosts();
         return null;
     }

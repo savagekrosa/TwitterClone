@@ -7,8 +7,8 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <ui:composition template="/WEB-INF/templates/layout.xhtml">
     <ui:define name="content">
-        <h:form id="tweetForm" rendered="#{userBacking.loggedIn}" >
-            <h:inputTextarea value="#{postsBacking.newPostContent}" />
+        <h:form id="tweetForm" rendered="#{userBacking.loggedIn}">
+            <h:inputTextarea value="#{postsBacking.newPostContent}"/>
             <h:commandButton value="Tweet!" action="#{postsBacking.createPost}"/>
         </h:form>
         <h:dataTable value="#{postsBacking.posts}" var="post">

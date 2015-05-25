@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1"
-   xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
         http://xmlns.jcp.org/xml/ns/persistence
         http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-   <persistence-unit name="twitter">
-      <jta-data-source>java:jboss/datasources/twitterDS</jta-data-source>
-       <class>soa.model.entity.CommentEntity</class>
-       <class>soa.model.entity.GroupEntity</class>
-       <class>soa.model.entity.HashtagEntity</class>
-       <class>soa.model.entity.PostEntity</class>
-       <class>soa.model.entity.UserEntity</class>
-       <properties>
-           <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
-           <property name="hibernate.show_sql" value="true"/>
-           <property name="hibernate.format_sql" value="true"/>
-           <property name="hbm2ddl.auto" value="update"/>
-           <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/Twitter"/>
-           <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
-       </properties>
-   </persistence-unit>
+    <persistence-unit name="twitter">
+        <jta-data-source>java:jboss/datasources/twitterDS</jta-data-source>
+        <class>soa.model.entity.CommentEntity</class>
+        <class>soa.model.entity.GroupEntity</class>
+        <class>soa.model.entity.HashtagEntity</class>
+        <class>soa.model.entity.PostEntity</class>
+        <class>soa.model.entity.UserEntity</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/Twitter"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+        </properties>
+    </persistence-unit>
 </persistence>

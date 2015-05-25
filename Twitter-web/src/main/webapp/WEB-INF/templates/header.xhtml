@@ -5,9 +5,10 @@
       xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
         >
 <h:body>
-<ui:composition>
-    <h:outputText value="You are logged as: #{userBacking.loggedUser.username}, hello :)" rendered="#{userBacking.loggedIn}" />
-    <h:outputText value="You are not logged in" rendered="#{!userBacking.loggedIn}" />
-</ui:composition>
+    <ui:composition>
+        <h:outputText value="You are logged as: #{userBacking.loggedUser.username}, hello :)"
+                      rendered="#{userBacking.loggedIn}"/>
+        <h:outputText value="You are not logged in" rendered="#{!userBacking.loggedIn}"/>
+    </ui:composition>
 </h:body>
 </html>

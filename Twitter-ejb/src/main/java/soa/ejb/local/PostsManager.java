@@ -9,5 +9,6 @@ import java.util.List;
 @Local
 public interface PostsManager {
     List<PostEntity> getAllPosts();
+
     void savePost(String content, UserEntity author);
 }
