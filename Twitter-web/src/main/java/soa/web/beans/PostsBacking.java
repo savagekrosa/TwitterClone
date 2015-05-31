@@ -5,17 +5,16 @@ import soa.model.entity.PostEntity;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.jms.JMSContext;
 import javax.jms.JMSException;
 import javax.jms.MapMessage;
 import javax.jms.Queue;
 import java.util.List;
 
-@ManagedBean(name = "postsBacking")
+@Named("postsBacking")
 @RequestScoped
 public class PostsBacking {
     @Resource(mappedName = "java:jboss/exported/jms/queue/twitter")
@@ -24,7 +23,7 @@ public class PostsBacking {
     private JMSContext jmsContext;
     @Inject
     PostsManager postsManager;
-    @ManagedProperty(value = "#{userBacking}")
+    @Inject
     private UserBacking userBacking;
     private String newPostContent;
     private List<PostEntity> posts;
@@ -61,13 +60,5 @@ public class PostsBacking {
 
     public void setNewPostContent(String newPostContent) {
         this.newPostContent = newPostContent;
-    }
-
-    public UserBacking getUserBacking() {
-        return userBacking;
-    }
-
-    public void setUserBacking(UserBacking userBacking) {
-        this.userBacking = userBacking;
     }
 }
