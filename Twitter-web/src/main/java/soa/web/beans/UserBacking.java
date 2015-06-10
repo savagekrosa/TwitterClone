@@ -3,16 +3,17 @@ package soa.web.beans;
 import soa.ejb.local.UserManager;
 import soa.model.entity.UserEntity;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.inject.Named;
+import java.io.Serializable;
 
-@ManagedBean(name = "userBacking")
+@Named("userBacking")
 @SessionScoped
-public class UserBacking {
+public class UserBacking implements Serializable {
     @Inject
-    UserManager userManager;
+    private transient UserManager userManager;
 
     public UserEntity getLoggedUser() {
         FacesContext context = FacesContext.getCurrentInstance();
