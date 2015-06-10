@@ -497,7 +497,6 @@
         </interface>
     </interfaces>
 
- HEAD
     <socket-binding-group name="standard-sockets" default-interface="public"
                           port-offset="${jboss.socket.binding.port-offset:0}">
         <socket-binding name="management-http" interface="management" port="${jboss.management.http.port:9993}"/>
@@ -520,4 +519,3 @@
 
 
 </server>
->>>>>>> master
