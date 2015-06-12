@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b2bf348-b257-436d-adea-cffaf120366a" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/CommensBean.java" afterPath="$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/CommentsBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/CommentEntity.java" afterPath="$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/CommentEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/CommentsBacking.java" afterPath="$PROJECT_DIR$/Twitter-web/src/main/java/soa/web/beans/CommentsBacking.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/CommentsBean.java" afterPath="$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/CommentsBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/local/CommentsManager.java" afterPath="$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/local/CommentsManager.java" />
     </list>
     <ignored path="Twitter.iws" />
@@ -32,7 +31,7 @@
     <favorites_list name="Twitter" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.590985">
+    <splitter split-orientation="vertical" split-proportion="0.5993322">
       <split-first>
         <leaf>
           <file leaf-file-name="GroupEntity.java" pinned="false" current-in-tab="false">
@@ -110,8 +109,8 @@
           <file leaf-file-name="CommentsBean.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/CommentsBean.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.37142858">
-                  <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+                <state vertical-scroll-proportion="0.55">
+                  <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1018#1019#0" expanded="true" />
@@ -163,16 +162,18 @@
             <entry file="file://$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/local/CommentsManager.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-                  <folding />
+                  <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="HashtagBean.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="HashtagBean.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/HashtagBean.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.14285715">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="37" selection-end-column="22" />
                   <folding />
                 </state>
@@ -193,7 +194,7 @@
             <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/UserEntity.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+                  <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -209,11 +210,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CommentEntity.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CommentEntity.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/CommentEntity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+                <state vertical-scroll-proportion="0.52682924">
+                  <caret line="7" column="108" selection-start-line="7" selection-start-column="108" selection-end-line="7" selection-end-column="108" />
                   <folding />
                 </state>
               </provider>
@@ -1106,12 +1107,12 @@
       <workItem from="1433946103606" duration="471000" />
       <workItem from="1434094995850" duration="1068000" />
       <workItem from="1434100355479" duration="3910000" />
-      <workItem from="1434104564341" duration="2203000" />
+      <workItem from="1434104564341" duration="2815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12306000" />
+    <option name="totallyTimeSpent" value="12918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="449" width="1368" height="742" extended-state="6" />
@@ -1509,14 +1510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/HashtagEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1545,34 +1538,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/HashtagBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/local/CommentsManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Twitter-jpa/src/main/java/soa/model/entity/CommentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/HashtagBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14285715">
-          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="37" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.52682924">
+          <caret line="7" column="108" selection-start-line="7" selection-start-column="108" selection-end-line="7" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Twitter-ejb/src/main/java/soa/ejb/stateless/CommentsBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37142858">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.55">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1018#1019#0" expanded="true" />

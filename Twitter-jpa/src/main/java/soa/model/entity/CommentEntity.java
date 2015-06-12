@@ -4,7 +4,8 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 @NamedQueries({
         @NamedQuery(name = "CommentEntity.findPost", query = "select p.author,p.content from PostEntity p,CommentEntity c where c.commentId = :commentId"),
-        @NamedQuery(name = "CommentEntity.findByAuthor", query = "select comment.content from CommentEntity comment where comment.author = :author")
+        @NamedQuery(name = "CommentEntity.findByAuthor", query = "select comment.content from CommentEntity comment where comment.author = :author"),
+        @NamedQuery(name = "CommentEntity.findAllFromPost",query = "select c.content,c.author,c.creationDate from PostEntity p,CommentEntity c where p.postId = :postid" )
 })
 @Entity
 @Table(name = "comments")

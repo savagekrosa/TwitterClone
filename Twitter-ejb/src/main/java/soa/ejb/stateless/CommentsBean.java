@@ -34,4 +34,14 @@ public class CommentsBean implements CommentsManager{
     public boolean addCommentToPost(int postid, CommentEntity comment) {
         return false;
     }
+
+    @Override
+    public List<CommentEntity> getAllCommmentsFromPost(int postid) {
+
+        TypedQuery<CommentEntity> query = em.createNamedQuery("CommentEntity.findAllFromPost",CommentEntity.class)
+                .setParameter("postid",postid);
+        List<CommentEntity> results = query.getResultList();
+
+        return results;
+    }
 }
