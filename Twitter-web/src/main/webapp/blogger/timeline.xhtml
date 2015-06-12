@@ -26,9 +26,9 @@
             </h:column>
             <h:column>
                 <f:facet name="header">
-                    <h:outputText value="Author"/>
+                    <h:outputText value="Created"/>
                 </f:facet>
-                <h:outputText value="#{post.creationdate}"/>
+                <h:outputText value="#{post.creationdate}" converter="org.ocpsoft.PrettyTimeConverter"/>
             </h:column>
             <h:column>
                 <f:facet name="header">
