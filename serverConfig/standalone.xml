@@ -384,9 +384,9 @@
                 </jms-connection-factories>
 
                 <jms-destinations>
-                    <jms-queue name="twitterQueue">
-                        <entry name="queue/twitter"/>
-                        <entry name="java:jboss/exported/jms/queue/twitter"/>
+                    <jms-queue name="twitterPostsQueue">
+                        <entry name="queue/twitterPosts"/>
+                        <entry name="java:jboss/exported/jms/queue/twitterPosts"/>
                     </jms-queue>
                     <jms-queue name="ExpiryQueue">
                         <entry name="java:/jms/queue/ExpiryQueue"/>

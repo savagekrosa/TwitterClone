@@ -17,7 +17,7 @@ import java.util.List;
 @Named("postsBacking")
 @RequestScoped
 public class PostsBacking {
-    @Resource(mappedName = "java:jboss/exported/jms/queue/twitter")
+    @Resource(mappedName = "java:jboss/exported/jms/queue/twitterPosts")
     private Queue twitterQueue;
     @Inject
     private JMSContext jmsContext;
@@ -42,7 +42,6 @@ public class PostsBacking {
             e.printStackTrace();
         }
         jmsContext.createProducer().send(twitterQueue, msg);
-//        postsManager.savePost(newPostContent, userBacking.getLoggedUser());
         return "timeline?faces-redirect=true";
     }
 

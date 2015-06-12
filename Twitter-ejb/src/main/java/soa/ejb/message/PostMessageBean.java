@@ -17,13 +17,13 @@ import javax.jms.Message;
         @ActivationConfigProperty( propertyName = "destinationType",
                 propertyValue = "javax.jms.Queue"),
         @ActivationConfigProperty( propertyName = "destination",
-                propertyValue ="/queue/twitter")
+                propertyValue ="/queue/twitterPosts")
 })
 public class PostMessageBean implements javax.jms.MessageListener {
     @EJB
-    PostsManager postsManager;
+    private PostsManager postsManager;
     @EJB
-    UserManager userManager;
+    private UserManager userManager;
     @Resource
     private MessageDrivenContext mdctx;
     @Override
