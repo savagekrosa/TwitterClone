@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="ear" name="Twitter-ear:ear">
-    <output-path>$PROJECT_DIR$/Twitter-ear/target</output-path>
-    <root id="archive" name="Twitter-ear.ear">
-      <element id="artifact" artifact-name="Twitter-ear:ear exploded" />
-    </root>
-  </artifact>
-</component>
