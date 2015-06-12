@@ -2,7 +2,10 @@ package soa.model.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-
+@NamedQueries({
+        @NamedQuery(name = "CommentEntity.findPost", query = "select p.author,p.content from PostEntity p,CommentEntity c "),
+        @NamedQuery(name = "CommentEntity.findByAuthor", query = "select comment.content from CommentEntity comment where comment.author = :author")
+})
 @Entity
 @Table(name = "comments")
 public class CommentEntity {
