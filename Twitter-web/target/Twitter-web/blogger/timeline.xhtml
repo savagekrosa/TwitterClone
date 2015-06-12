@@ -36,6 +36,12 @@
                 </f:facet>
                 <h:outputText value="#{post.content}"/>
             </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Comment"/>
+                </f:facet>
+                <h:outputText value="#{post.author.username}"/>
+            </h:column>
         </h:dataTable>
     </ui:define>
 </ui:composition>

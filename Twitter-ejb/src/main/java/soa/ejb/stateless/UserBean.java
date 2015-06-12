@@ -25,4 +25,25 @@ public class UserBean implements UserManager {
         }
         return result;
     }
+
+    @Override
+    public boolean addUser(String username, String mail, String password) {
+
+        UserEntity user = new UserEntity();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setMail(mail);
+        em.persist(user);
+
+        return true;
+    }
+    @Override
+    public void deleteUser(int id)
+    {
+        UserEntity user = em.find(UserEntity.class, id);
+        em.remove(user);
+    }
+
+
+
 }

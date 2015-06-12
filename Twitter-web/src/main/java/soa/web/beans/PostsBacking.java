@@ -1,6 +1,7 @@
 package soa.web.beans;
 
 import soa.ejb.local.PostsManager;
+import soa.model.entity.CommentEntity;
 import soa.model.entity.PostEntity;
 
 import javax.annotation.PostConstruct;
@@ -44,6 +45,22 @@ public class PostsBacking {
         jmsContext.createProducer().send(twitterQueue, msg);
 //        postsManager.savePost(newPostContent, userBacking.getLoggedUser());
         return "timeline?faces-redirect=true";
+    }
+
+    public PostEntity getSinglePost(int id)
+    {
+        for(PostEntity p : posts)
+        {
+            if(p.getPostId() == id) return p;
+        }
+        return null;
+    }
+
+    public boolean addCommentToPost(int id, CommentEntity comment)
+    {
+        PostEntity p = getSinglePost(id);
+        p.getComments().add(comment);
+        return true;
     }
 
     public List<PostEntity> getPosts() {

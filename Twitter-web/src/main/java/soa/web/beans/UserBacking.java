@@ -25,4 +25,14 @@ public class UserBacking implements Serializable {
     public boolean isLoggedIn() {
         return getLoggedUser() != null;
     }
+    public boolean addUser(String mail,String userName,String password)
+    {
+        return userManager.addUser(mail,userName,password);
+    }
+    public boolean deleteUser(String userName)
+    {
+        UserEntity user =  userManager.findByUsername(userName);
+        userManager.deleteUser(user.getUserId());
+        return true;
+    }
 }
