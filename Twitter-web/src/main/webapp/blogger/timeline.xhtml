@@ -42,10 +42,8 @@
                 </f:facet>
                 <h:outputText value="#{post.author.username}"/>
             </h:column>
-            <h:form id="commentForm" rendered="#{userBacking.loggedIn}">
-                <h:inputTextarea value="#{postsBacking.getSinglePost(post.postId).}"/>
-                <h:commandButton value="Tweet!" action="#{postsBacking.getSinglePost(post.postId).comments.add}"/>
-            </h:form>
+
+
         </h:dataTable>
     </ui:define>
 </ui:composition>

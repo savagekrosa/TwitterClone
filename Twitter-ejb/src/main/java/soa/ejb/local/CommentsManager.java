@@ -12,7 +12,7 @@ import java.util.List;
 @Local
 public interface CommentsManager {
     PostEntity getCommentedPost(String commentId);
-    boolean addCommentToPost(int postid, CommentEntity comment);
+
     List<CommentEntity> getAllCommmentsFromPost(int postid);
 
 }

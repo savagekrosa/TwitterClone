@@ -3,14 +3,10 @@ package soa.model.entity;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
-//@NamedQueries(value = {
         @NamedQuery(
                 name = "UserEntity.findByUsername",
                 query = "select user from UserEntity user where user.username = :name")
-//        @NamedQuery(
-//                name = "UserEntity.addUser",
-//                query = "insert into UserEntity (mail,username,password) values(:mail,:username:password) ")
-//})
+
 @Entity
 @Table(name = "users")
 public class UserEntity {

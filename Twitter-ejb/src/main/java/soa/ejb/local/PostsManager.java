@@ -1,5 +1,6 @@
 package soa.ejb.local;
 
+import soa.model.entity.CommentEntity;
 import soa.model.entity.PostEntity;
 import soa.model.entity.UserEntity;
 
@@ -9,6 +10,9 @@ import java.util.List;
 @Local
 public interface PostsManager {
     List<PostEntity> getAllPosts();
+
+
+    public boolean addCommentToPost(int postid, CommentEntity comment);
 
     void savePost(String content, UserEntity author);
 }

@@ -20,7 +20,7 @@ public class CommentsBean implements CommentsManager{
 
     @Override
     public PostEntity getCommentedPost(String commentId) {
-        TypedQuery<PostEntity> query  = em.createNamedQuery("CommentEntity.findPost",PostEntity.class).setParameter("commentId",commentId);
+        TypedQuery<PostEntity> query = em.createNamedQuery("CommentEntity.findPost", PostEntity.class).setParameter("commentId", commentId);
         List<PostEntity> results = query.getResultList();
 
         PostEntity result = null;
@@ -29,12 +29,6 @@ public class CommentsBean implements CommentsManager{
         }
         return result;
     }
-
-    @Override
-    public boolean addCommentToPost(int postid, CommentEntity comment) {
-        return false;
-    }
-
     @Override
     public List<CommentEntity> getAllCommmentsFromPost(int postid) {
 

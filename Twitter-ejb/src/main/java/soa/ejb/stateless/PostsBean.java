@@ -2,6 +2,7 @@ package soa.ejb.stateless;
 
 import soa.ejb.local.HashtagManager;
 import soa.ejb.local.PostsManager;
+import soa.model.entity.CommentEntity;
 import soa.model.entity.PostEntity;
 import soa.model.entity.UserEntity;
 
@@ -24,6 +25,14 @@ public class PostsBean implements PostsManager {
     public List<PostEntity> getAllPosts() {
         TypedQuery<PostEntity> query = em.createNamedQuery("PostEntity.findAll", PostEntity.class);
         return query.getResultList();
+    }
+
+    @Override
+    public boolean addCommentToPost(int postid, CommentEntity comment) {
+
+        PostEntity post = em.find(PostEntity.class, postid);
+        post.getComments().add(comment);
+        return true;
     }
 
     @Override
