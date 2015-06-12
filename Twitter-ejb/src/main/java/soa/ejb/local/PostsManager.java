@@ -12,7 +12,7 @@ public interface PostsManager {
     List<PostEntity> getAllPosts();
 
 
-    public boolean addCommentToPost(int postid, CommentEntity comment);
+    public void addCommentToPost(int postid, CommentEntity comment);
 
     void savePost(String content, UserEntity author);
 }

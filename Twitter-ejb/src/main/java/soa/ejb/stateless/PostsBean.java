@@ -28,11 +28,10 @@ public class PostsBean implements PostsManager {
     }
 
     @Override
-    public boolean addCommentToPost(int postid, CommentEntity comment) {
+    public void addCommentToPost(int postid, CommentEntity comment) {
 
         PostEntity post = em.find(PostEntity.class, postid);
         post.getComments().add(comment);
-        return true;
     }
 
     @Override

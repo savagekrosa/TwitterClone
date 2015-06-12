@@ -56,10 +56,9 @@ public class PostsBacking {
         return null;
     }
 
-    public boolean addCommentToPost(int id, CommentEntity comment)
+    public void addCommentToPost(int id, CommentEntity comment)
     {
         postsManager.addCommentToPost(id,comment);
-        return true;
     }
 
     public List<PostEntity> getPosts() {

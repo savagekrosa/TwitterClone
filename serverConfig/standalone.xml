@@ -384,9 +384,13 @@
                 </jms-connection-factories>
 
                 <jms-destinations>
-                    <jms-queue name="twitterQueue">
+                    <jms-queue name="twitterPostsQueue">
+                        <entry name="queue/twitterPosts"/>
+                        <entry name="java:jboss/exported/jms/queue/twitterPosts"/>
+                    </jms-queue>
+                    <jms-queue name="twitterCommentsQueue">
                         <entry name="queue/twitter"/>
-                        <entry name="java:jboss/exported/jms/queue/twitter"/>
+                        <entry name="java:jboss/exported/jms/queue/twitterComments"/>
                     </jms-queue>
                     <jms-queue name="ExpiryQueue">
                         <entry name="java:/jms/queue/ExpiryQueue"/>
@@ -394,6 +398,7 @@
                     <jms-queue name="DLQ">
                         <entry name="java:/jms/queue/DLQ"/>
                     </jms-queue>
+
                 </jms-destinations>
             </hornetq-server>
         </subsystem>

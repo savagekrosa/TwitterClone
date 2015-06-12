@@ -3,7 +3,7 @@ package soa.model.entity;
 import javax.persistence.*;
 import java.sql.Timestamp;
 @NamedQueries({
-        @NamedQuery(name = "CommentEntity.findPost", query = "select p from PostEntity p,CommentEntity c where c.commentId = :commentId"),
+        @NamedQuery(name = "CommentEntity.findPost", query = "select c.commentedPost from CommentEntity c where c.commentId=:id"),
         @NamedQuery(name = "CommentEntity.findByAuthor", query = "select comment from CommentEntity comment where comment.author = :author"),
         @NamedQuery(name = "CommentEntity.findAllFromPost",query = "select c from PostEntity p,CommentEntity c where p.postId = :postid" )
 })
