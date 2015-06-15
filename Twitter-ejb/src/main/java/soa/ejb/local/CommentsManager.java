@@ -2,8 +2,10 @@ package soa.ejb.local;
 
 import soa.model.entity.CommentEntity;
 import soa.model.entity.PostEntity;
+import soa.model.entity.UserEntity;
 
 import javax.ejb.Local;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -11,10 +13,9 @@ import java.util.List;
  */
 @Local
 public interface CommentsManager {
-    PostEntity getCommentedPost(String commentId);
 
     List<CommentEntity> getAllCommmentsFromPost(int postid);
-
+    public void addCommentToPost(int postid, String content,Timestamp creationDate,PostEntity commentedPost,UserEntity author);
 }
 
 

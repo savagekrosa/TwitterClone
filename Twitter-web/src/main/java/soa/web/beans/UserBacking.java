@@ -29,10 +29,4 @@ public class UserBacking implements Serializable {
     {
         return userManager.addUser(mail,userName,password);
     }
-    public boolean deleteUser(String userName)
-    {
-        UserEntity user =  userManager.findByUsername(userName);
-        userManager.deleteUser(user.getUserId());
-        return true;
-    }
 }

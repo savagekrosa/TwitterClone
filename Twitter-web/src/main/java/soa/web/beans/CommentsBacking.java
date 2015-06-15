@@ -30,7 +30,7 @@ public class CommentsBacking implements Serializable{
     private String newCommentContent;
     private List<CommentEntity> comments;
 
-    public boolean addCommentToPost(int postid, CommentEntity c)
+    public boolean addCommentToPost()
     {
         return true;
     }

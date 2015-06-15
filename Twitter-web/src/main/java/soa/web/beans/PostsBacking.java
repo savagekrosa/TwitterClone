@@ -1,7 +1,6 @@
 package soa.web.beans;
 
 import soa.ejb.local.PostsManager;
-import soa.model.entity.CommentEntity;
 import soa.model.entity.PostEntity;
 
 import javax.annotation.PostConstruct;
@@ -56,10 +55,6 @@ public class PostsBacking {
         return null;
     }
 
-    public void addCommentToPost(int id, CommentEntity comment)
-    {
-        postsManager.addCommentToPost(id,comment);
-    }
 
     public List<PostEntity> getPosts() {
         return posts;

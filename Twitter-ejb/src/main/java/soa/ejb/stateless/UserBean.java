@@ -37,12 +37,6 @@ public class UserBean implements UserManager {
 
         return true;
     }
-    @Override
-    public void deleteUser(int id)
-    {
-        UserEntity user = em.find(UserEntity.class, id);
-        em.remove(user);
-    }
 
 
 

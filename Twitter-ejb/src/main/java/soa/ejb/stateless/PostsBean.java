@@ -27,12 +27,7 @@ public class PostsBean implements PostsManager {
         return query.getResultList();
     }
 
-    @Override
-    public void addCommentToPost(int postid, CommentEntity comment) {
 
-        PostEntity post = em.find(PostEntity.class, postid);
-        post.getComments().add(comment);
-    }
 
     @Override
     public void savePost(String content, UserEntity author) {
